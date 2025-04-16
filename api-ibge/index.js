@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 
 const IBGE_API_URL = process.env.IBGE_API_URL;
+const PORT = process.env.PORT;
 
 async function fetchAndSaveData() {
   try {
@@ -31,7 +32,7 @@ async function startServer() {
   });
 
   app.listen(PORT, () => {
-    console.log(`API IBGE rodando na porta ${process.env.PORT}`);
+    console.log(`API IBGE rodando na porta ${PORT}`);
   });
 }
 
